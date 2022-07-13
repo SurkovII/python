@@ -8,11 +8,11 @@ def searchDiapazon(number):
     if number == 1:
         print(f'В четверти {number} x > 0, y > 0')
     elif number == 2:
-        print(f'В четверти {number} x > 0, y < 0')
+        print(f'В четверти {number} x < 0, y > 0')
     elif number == 3:
         print(f'В четверти {number} x < 0, y < 0')
     elif number == 4:
-        print(f'В четверти {number} x < 0, y > 0')
+        print(f'В четверти {number} x > 0, y < 0')
     else:
         print('Четвертей всего 4')
 
