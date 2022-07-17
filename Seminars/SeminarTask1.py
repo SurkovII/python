@@ -15,5 +15,5 @@ def progr(num):
 
 # progr(num)
 
-for i in range (0, 50, 1):
+for i in range(0, 50, 1):
     progr(i)
