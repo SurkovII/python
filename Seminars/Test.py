@@ -1,27 +1,13 @@
-def Factorial(value):
-    print('[',end='')# За скобки прошу прощения, использовал чиcто для визуализации
-    result=1
-    if value==0 or value==1:
-        return print('1',end=']')
-    else:
-        for i in range(1,(value+1)):
-            result*=i
-            print(f'{result}',end='')
-            if i!=value: print(', ',end='')
-    print(']',end='')
-def PrintFactorial(value):
-    print(' (',end='')
-    printMulti=''
-    if value==0: print('1',end='')
-    for i in range(1,(value+1)):
-        printMulti=f'{printMulti}*{i}'
-        print(f'{printMulti[1:]}',end='')
-        if i!=value: print(', ',end='')
-    print(')',end='')
-try:
-    number=int(input('Введите число: '))
-    print(f'Пусть N = {number}, тогда ',end='')
-    Factorial(number)
-    PrintFactorial(number)
-except:
-    print('Ощибка! Введено не целочисленное значение!')
+
+
+def SumDict(dict1, dict2):
+    resDict = {}
+    for i in range(len(dict1)+len(dict2)):
+        if i in dict1.keys() and i not in dict2.keys():
+            resDict[i]=dict1[i]
+        elif i in dict2.keys() and i not in dict1.keys():
+            resDict[i]=dict2[i]
+    for key, value in dict1.items():
+                dict2[key] = dict2.get(key, 0) + value
+    resDict.update(dict2)
+    return dict(reversed(sorted(resDict.items(), key=lambda x:x[0])))
